@@ -63,12 +63,12 @@ For app.haysam.school, haysam.school and every Haysam web tool. The reference is
 | `surface` | #FFFFFF | Cards, panels, nav, selected tab, focused input |
 | `text` | #140907 | Headings and body text (18.4:1 on background) |
 | `text-muted` | #5E5654 | Descriptions, helper text, nav links, captions (6.7:1) |
-| `text-placeholder` | #9A9391 | Placeholders only (2.8:1: never for real content) |
+| `text-placeholder` | #77706E | Placeholders and empty states (4.5:1; darkened from the site's #9A9391) |
 | `line` / `line-strong` | #E3E5F3 / #CFD2E6 | 1px borders; input border on hover |
 | `primary` / `primary-hover` | #58160C / #6E1E12 | Primary buttons, selected chips; white text on them |
 | `highlight` | #FEE252 | Step numbers and numbered circles, with ink text |
 | `icon-bg` | #FFF6C9 | Icon tiles, with an ink icon |
-| `focus` | #1B7BFF | Focus ring and focused input border |
+| `focus` | #006AEB | Focus ring and focused input border (4.6:1; deepened from the site's #1B7BFF) |
 | `danger` | #B42318 | Error text and invalid borders |
 | `success` | #2F6B2A | Done state of copy and save buttons |
 | `code-bg`, `code-text`, `code-button` | #1F1F1F, #F6F7FF, #313131 | Code blocks |
@@ -140,7 +140,8 @@ Put `hs-ui` on the page's `body` for the background, text colour, font and focus
 ## Accessibility
 
 - Focus: a 2px `focus` ring with a 2px offset on every interactive element.
-- Contrast: `text` and `text-muted` pass 4.5:1 on `background` and `surface`; white on `primary` is 13.7:1. `text-placeholder` and `line` do not, so they never carry information alone.
+- Contrast: every text colour reaches at least 4.5:1 on the grounds its token note names, and the focus ring 4.6:1. Two values differ from the site for this: `text-placeholder` (#9A9391 → #77706E) and `focus` (#1B7BFF → #006AEB), same hue, darker. `line` borders stay decorative, so every control they outline also has a visible label.
+- Media keeps the brand-book `fire` (#DF3909): white labels on it are 4.4:1, so they are always bold and 24px or larger, where 3:1 is enough.
 - Every input has a visible `body-4` label; hints and errors are linked with `aria-describedby`; invalid fields get `aria-invalid="true"`.
 - Chips keep their real radio or checkbox input; tabs use `role="tab"` and `aria-selected`; the menu button sets `aria-expanded`. Provide a skip link (`hs-skip`).
 

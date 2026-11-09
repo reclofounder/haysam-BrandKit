@@ -20,7 +20,7 @@ Every form field in the platform. Group fields in an `hs-panel hs-form` (24px ga
 
 - Label: `body-4` in `text`. Optional fields add `<span class="hs-muted">(ixtiyoriy)</span>` to the label.
 - Field: `background` fill, `line` border, `radius-md`, 8px × 12px padding, `body-3` text. Hover: `line-strong` border. Focus: `focus` border and `surface` fill.
-- Placeholder: `text-placeholder`, which is light (2.8:1), so never put needed information only in a placeholder.
+- Placeholder: `text-placeholder` (4.5:1). It disappears when people type, so never put needed information only in a placeholder.
 - Hint: `hs-field__hint caption-2`. Error: `aria-invalid="true"` on the field (`danger` border) and an `hs-field__error caption-2` message linked with `aria-describedby`.
 - Inside a tinted `hs-inset` group, fields switch to a `surface` fill.
 

@@ -28,7 +28,7 @@
   --surface: var(--white);
   --text: #140907;
   --text-muted: #5e5654;
-  --text-placeholder: #9a9391;
+  --text-placeholder: #77706e;
   --line: #e3e5f3;
   --line-strong: #cfd2e6;
   --primary: var(--ink);
@@ -36,7 +36,7 @@
   --on-primary: var(--white);
   --highlight: var(--yellow);
   --icon-bg: var(--yellow-soft);
-  --focus: #1b7bff;
+  --focus: #006aeb;
   --danger: #b42318;
   --success: #2f6b2a;
   --code-bg: #1f1f1f;
