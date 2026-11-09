@@ -4,6 +4,10 @@ Haysam is an Uzbek AI-education platform: lessons, tutorials, news about AI tool
 
 ## Use it in Claude Design
 
+**Ready-made system:** open [Haysam in Claude Design](https://claude.ai/artifact/Ht4CLwrMEiWZxMPMbijf8z) and design with it directly.
+
+**Or build your own copy from this repository:**
+
 1. Open [Claude Design](https://claude.ai/design) and start a new design system.
 2. Add this repository as the source: `https://github.com/reclofounder/haysam-BrandKit`. If GitHub isn't connected, download the ZIP (**Code → Download ZIP**), unzip it and drop the folder in instead.
 3. Claude reads `tokens.json`, `fonts/`, `assets/`, `components/` and this README, and builds the Haysam system from them. `tokens.json` is already in Claude Design's format, so colours, type, spacing, radii and shadows come across exactly.
