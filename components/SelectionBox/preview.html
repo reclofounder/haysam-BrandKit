@@ -1,0 +1,26 @@
+<!-- @dsCard group="Signature details" height=220 subtitle="Figma-style selection with the named cursor" -->
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<title>Selection box</title>
+<link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="../bundle.css">
+<style>
+  body { margin: 0; display: grid; place-items: center; min-height: 220px; padding: var(--space-m) var(--space-xl) var(--space-l) var(--space-m); box-sizing: border-box; }
+  .hs-select { --hs-size: 64px; font: 400 var(--hs-size) / 0.9 var(--font-news); text-transform: uppercase; }
+  .hs-select .hs-cursor { font-size: 18px; }
+</style>
+</head>
+<body class="hs-canvas--dots">
+  <span class="hs-select">
+    AI vosita
+    <i class="hs-select__h hs-select__h--tl"></i><i class="hs-select__h hs-select__h--tr"></i>
+    <i class="hs-select__h hs-select__h--bl"></i><i class="hs-select__h hs-select__h--br"></i>
+    <span class="hs-cursor" aria-hidden="true">
+      <svg class="hs-cursor__arrow" viewBox="0 0 24 24"><path d="M3 2 21 10.5 13.2 12.8 9.6 20.5Z"/></svg>
+      <span class="hs-cursor__name">haysam</span>
+    </span>
+  </span>
+</body>
+</html>

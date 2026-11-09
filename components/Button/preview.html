@@ -1,0 +1,27 @@
+<!-- @dsCard group="Actions" height=200 subtitle="Brand-book pill: downloads and links" -->
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<title>Button</title>
+<link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="../bundle.css">
+<style>
+  body { margin: 0; display: grid; gap: var(--space-s); padding: var(--space-m); background: var(--lavender-white); }
+  .row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: var(--space-m); border-radius: var(--radius-card); }
+  .row--lavender { background: var(--lavender); }
+  .row--night { background: var(--night); }
+</style>
+</head>
+<body>
+  <div class="row row--lavender">
+    <a class="hs-button" href="#">SVG <span aria-hidden="true">↓</span></a>
+    <a class="hs-button" href="#">PNG <span aria-hidden="true">↓</span></a>
+    <a class="hs-button hs-button--lg" href="#">Barcha shriftlar · ZIP <span aria-hidden="true">↓</span></a>
+    <a class="hs-button hs-button--yellow hs-button--lg" href="#">AI brief · .md <span aria-hidden="true">↓</span></a>
+  </div>
+  <div class="row row--night" data-theme="night">
+    <a class="hs-button hs-button--lg" href="#">Brand kit · ZIP <span aria-hidden="true">↓</span></a>
+  </div>
+</body>
+</html>
