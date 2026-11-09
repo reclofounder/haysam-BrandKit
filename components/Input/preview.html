@@ -1,0 +1,46 @@
+<!-- @dsCard group="Forms" height=560 subtitle="Labels, inputs, select, textarea, hint and error" -->
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<title>Input</title>
+<link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="../bundle.css">
+<style>
+  body { margin: 0; padding: var(--s-300); }
+  .hs-panel { max-width: 560px; }
+</style>
+</head>
+<body class="hs-ui">
+<form class="hs-panel hs-form" onsubmit="return false">
+  <div class="hs-field">
+    <label class="body-4" for="f-headline">Sarlavha</label>
+    <input class="hs-input body-3" id="f-headline" placeholder="Saytni o'zing yig'" aria-describedby="f-headline-hint">
+    <p class="hs-field__hint caption-2" id="f-headline-hint">Beshta so'zgacha. Claude kerak bo'lsa qisqartiradi.</p>
+  </div>
+  <div class="hs-field-row">
+    <div class="hs-field">
+      <label class="body-4" for="f-tool">Tool</label>
+      <input class="hs-input body-3" id="f-tool" value="Claude">
+    </div>
+    <div class="hs-field">
+      <label class="body-4" for="f-cta">Tugma matni <span class="hs-muted">(ixtiyoriy)</span></label>
+      <input class="hs-input body-3" id="f-cta" placeholder="Sinab ko'r">
+    </div>
+  </div>
+  <div class="hs-field">
+    <label class="body-4" for="f-pages">Sahifalar soni</label>
+    <select class="hs-input hs-select body-3" id="f-pages" style="max-width: 120px"><option>3</option><option selected>5</option><option>7</option></select>
+  </div>
+  <div class="hs-field">
+    <label class="body-4" for="f-direction">Yo'nalish</label>
+    <textarea class="hs-input body-3" id="f-direction" rows="2" placeholder="Ishonchli kayfiyat, studio, odam qutilardan sayt yig'yapti"></textarea>
+  </div>
+  <div class="hs-field">
+    <label class="body-4" for="f-figma">Figma fayl havolasi <span class="hs-muted">(ixtiyoriy)</span></label>
+    <input class="hs-input body-3" id="f-figma" value="figma.com/file" aria-invalid="true" aria-describedby="f-figma-error">
+    <p class="hs-field__error caption-2" id="f-figma-error">Havola to'liq emas: fayl manzilini butunlay nusxalang.</p>
+  </div>
+</form>
+</body>
+</html>

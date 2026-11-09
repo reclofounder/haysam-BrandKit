@@ -9,10 +9,10 @@ As a signature detail around a headline word or the hero object, to say "we are 
 ## Markup
 
 ```html
-<span class="hs-select">
+<span class="hs-select-box">
   AI vosita
-  <i class="hs-select__h hs-select__h--tl"></i><i class="hs-select__h hs-select__h--tr"></i>
-  <i class="hs-select__h hs-select__h--bl"></i><i class="hs-select__h hs-select__h--br"></i>
+  <i class="hs-select-box__h hs-select-box__h--tl"></i><i class="hs-select-box__h hs-select-box__h--tr"></i>
+  <i class="hs-select-box__h hs-select-box__h--bl"></i><i class="hs-select-box__h hs-select-box__h--br"></i>
   <span class="hs-cursor" aria-hidden="true">
     <svg class="hs-cursor__arrow" viewBox="0 0 24 24"><path d="M3 2 21 10.5 13.2 12.8 9.6 20.5Z"/></svg>
     <span class="hs-cursor__name">haysam</span>

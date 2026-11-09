@@ -1,0 +1,36 @@
+<!-- @dsCard group="Navigation" height=200 subtitle="Floating glass nav: desktop and compact" -->
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<title>Nav</title>
+<link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="../bundle.css">
+<style>
+  body { margin: 0; padding: var(--s-300); }
+  .stack { display: flex; flex-direction: column; align-items: center; gap: var(--s-300); }
+  .compact .hs-nav__links, .compact .hs-nav__cta { display: none; }
+  .compact .hs-menu-toggle { display: block; }
+  .compact { gap: var(--s-200); width: 320px; justify-content: space-between; }
+</style>
+</head>
+<body class="hs-ui">
+<div class="stack">
+  <nav class="hs-nav" aria-label="Asosiy menyu">
+    <a class="hs-nav__brand" href="#" aria-current="page"><span class="hs-app-icon" aria-hidden="true"></span><span class="title-3">Haysam Cover</span></a>
+    <ul class="hs-nav__links">
+      <li><a class="body-5" href="#">Qanday ishlaydi</a></li>
+      <li><a class="body-5" href="#">Brif yozish</a></li>
+      <li><a class="body-5" href="#">Namunalar</a></li>
+      <li><a class="body-5" href="#">Savollar</a></li>
+    </ul>
+    <a class="hs-btn hs-btn--primary button-sm hs-nav__cta" href="#">O'rnatish</a>
+    <button class="hs-menu-toggle" type="button" aria-expanded="false" aria-label="Menyu"><span></span><span></span></button>
+  </nav>
+  <nav class="hs-nav compact" aria-label="Asosiy menyu, kichik ekran">
+    <a class="hs-nav__brand" href="#"><span class="hs-app-icon" aria-hidden="true"></span><span class="title-3">Haysam Cover</span></a>
+    <button class="hs-menu-toggle" type="button" aria-expanded="false" aria-label="Menyu"><span></span><span></span></button>
+  </nav>
+</div>
+</body>
+</html>

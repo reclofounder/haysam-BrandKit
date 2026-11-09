@@ -1,4 +1,4 @@
-<!-- @dsCard group="Labels" height=150 subtitle="Inter pill with a fire dot" -->
+<!-- @dsCard group="Forms" height=200 subtitle="Single-choice chips; ink when selected" -->
 <!doctype html>
 <html lang="uz">
 <head>
@@ -7,12 +7,30 @@
 <link rel="stylesheet" href="../../tokens.css">
 <link rel="stylesheet" href="../bundle.css">
 <style>
-  body { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-s); padding: var(--space-l) var(--space-m); }
-  .hs-chip { font-size: 18px; }
+  body { margin: 0; padding: var(--s-300); }
+  .groups { display: flex; flex-direction: column; gap: var(--s-300); }
 </style>
 </head>
-<body class="hs-canvas--dots">
-  <span class="hs-chip">Bir xil ishlarga ko‘p vaqt ketyaptimi?</span>
-  <span class="hs-chip hs-chip--plain">Yangi dars</span>
+<body class="hs-ui">
+<form class="groups" onsubmit="return false">
+  <fieldset class="hs-field">
+    <legend class="body-4">Post turi</legend>
+    <div class="hs-chips">
+      <label class="hs-chip"><input type="radio" name="type" checked><span class="button-sm">Yangi darslik</span></label>
+      <label class="hs-chip"><input type="radio" name="type"><span class="button-sm">Aksiya</span></label>
+      <label class="hs-chip"><input type="radio" name="type"><span class="button-sm">Qanday qilib</span></label>
+      <label class="hs-chip"><input type="radio" name="type"><span class="button-sm">Tool yangiligi</span></label>
+      <label class="hs-chip"><input type="radio" name="type"><span class="button-sm">Raqam</span></label>
+      <label class="hs-chip"><input type="radio" name="type"><span class="button-sm">E'lon</span></label>
+    </div>
+  </fieldset>
+  <fieldset class="hs-field">
+    <legend class="body-4">Format</legend>
+    <div class="hs-chips">
+      <label class="hs-chip"><input type="radio" name="format" checked><span class="button-sm">Muqova · 9:16 va 4:5</span></label>
+      <label class="hs-chip"><input type="radio" name="format"><span class="button-sm">Karusel · 4:5</span></label>
+    </div>
+  </fieldset>
+</form>
 </body>
 </html>

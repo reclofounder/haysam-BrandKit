@@ -1,25 +1,40 @@
 # Button
 
-The brand-book pill: a rounded ink button with a JetBrains Mono label, for downloads and links on pages, decks and documents.
+The product UI button: Geist SemiBold on a 12px-radius block, ink for the main action and white with a line border for the rest.
 
 ## When to use
 
-Web pages, the brand book, slides: anywhere a reader clicks. On social posts use `PopButton` or `GlassCTA` instead.
+Every action in app.haysam.school and Haysam websites. One primary button per view; everything else secondary. On posts use `PopButton` or `GlassCTA` instead.
 
 ## Markup
 
 ```html
-<a class="hs-button" href="...">SVG <span aria-hidden="true">↓</span></a>
-<a class="hs-button hs-button--lg" href="...">Barcha shriftlar · ZIP <span aria-hidden="true">↓</span></a>
-<a class="hs-button hs-button--yellow hs-button--lg" href="...">AI brief · .md <span aria-hidden="true">↓</span></a>
+<a class="hs-btn hs-btn--primary button-lg" href="...">Plaginni o'rnatish <i class="hs-i hs-i--arrow-down" aria-hidden="true"></i></a>
+<button class="hs-btn hs-btn--secondary button-md" type="button"><i class="hs-i hs-i--copy" aria-hidden="true"></i> Nusxalash</button>
 ```
 
-- Default: `button` fill with `on-button` label: ink with white text on Lavender, yellow with ink text on Night.
-- `hs-button--yellow`: the yellow pill on any ground, for the one primary action.
-- `hs-button--lg`: 18px label.
-- Focus shows a 3px `fire` ring.
+Always pair `hs-btn` with a size class from the type scale:
+
+| Size | Class | Height | Use |
+| --- | --- | --- | --- |
+| Large | `button-lg` | 44px | Hero and closing calls to action |
+| Medium | `button-md` | 40px | Forms, panels, dialogs |
+| Small | `button-sm` | 36px | Nav, toolbars, table rows |
+| Extra small | `button-xsm` | 32px | Inside code blocks and dense rows |
+
+- `hs-btn--primary`: `primary` fill, `on-primary` label, `primary-hover` and a 1px lift on hover.
+- `hs-btn--secondary`: `surface` fill with an inset `line` border; `background` on hover.
+- `hs-btn--done`: success state after copying or saving (`success` label and border); swap the icon to `check` and the label to the past tense.
+- `hs-btn--icon`: square icon-only button; give it an `aria-label`.
+- `disabled` or `aria-disabled="true"`: half opacity, no lift. (Added for the platform; the site has no disabled buttons.)
+- Press: scales to 0.98. Focus: 2px `focus` ring, 2px offset.
+
+## Icons and text links
+
+- Icons are Phosphor Regular at 18px, after the label for direction (`arrow-down`, `arrow-up-right`) and before it for the action (`copy`).
+- Inline text links use `hs-link`: `text` colour, underlined, 3px offset.
 
 ## Do and don't
 
-- Label with what happens or what you get, plus `↓` for downloads or `→` for links. No emoji.
-- Keep one yellow button per view.
+- Label with a verb that says what happens: "Plaginni o'rnatish", "Claude'da ochish", "Nusxalash".
+- Don't use pill-shaped, glowing, tilted or mono-font buttons in product UI; those are media styles.

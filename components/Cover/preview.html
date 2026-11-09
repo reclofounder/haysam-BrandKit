@@ -12,37 +12,37 @@
   .cover { position: relative; width: 960px; height: 288px; overflow: hidden; background: var(--canvas); }
   .cover svg { position: absolute; inset: 0; }
   .dot { fill: var(--dot-grid); }
-  .slab { fill: var(--night); rx: var(--radius-card); }
+  .slab { fill: var(--night); rx: var(--radius-lg); }
   .trail { fill: var(--fire); }
   .head { fill: var(--yellow); }
-  .blk-ink { fill: var(--ink); rx: var(--radius-card); }
-  .relief { fill: var(--white); rx: var(--radius-card); }
+  .blk-ink { fill: var(--ink); rx: var(--radius-lg); }
+  .relief { fill: var(--white); rx: var(--radius-lg); }
   [data-theme="night"] .slab { fill: var(--ink); }
   [data-theme="night"] .blk-ink { fill: var(--metal-light); }
-  .text { position: absolute; left: 40px; bottom: 32px; width: 440px; color: var(--text); }
-  .name { margin: 0; font: 800 112px / 0.95 var(--font-brand); letter-spacing: -0.02em; }
-  .tagline { margin: 8px 0 0; font: 400 14px / 1.4 var(--font-ui); }
+  .text { position: absolute; left: 40px; bottom: 32px; width: 440px; color: var(--post-text); }
+  .name { margin: 0; font: 600 120px / 0.95 var(--font-sans); letter-spacing: -0.02em; }
+  .tagline { margin: 8px 0 0; font: 400 14px / 1.4 var(--font-sans); }
 </style>
 </head>
 <body>
   <div class="cover">
     <!--
-      blocks: night slab 168×328 (radius-card), yellow pill 264×72 (radius-pill), fire pill 136×48, ink block 168×104 (radius-card), white relief 96×96 (radius-card)
+      blocks: night slab 168×328 (radius-lg), yellow pill 264×72 (radius-full), fire pill 136×48 (radius-full), ink block 168×104 (radius-lg), white relief 96×96 (radius-lg)
       arrangement: one tall night slab bleeding top and bottom, crossed by the comet (fire trail under a yellow head), ink and white satellites to the right
-      pattern: dot grid, the brand's own carousel ground; precise and mono, so a dot grid at one spacing step
-      scales: dot pitch space-l (48), dot radius 2, block corners radius-card (20), pills half their height
+      pattern: dot grid, the brand's own carousel ground and the precision of the 4px UI scale, so a dot grid at one spacing step
+      scales: dot pitch s-600 (48), dot radius 2, block corners radius-lg (16), pills half their height
     -->
     <svg width="960" height="288" viewBox="0 0 960 288" aria-hidden="true">
       <g id="dots"></g>
-      <rect class="slab" x="600" y="-20" width="168" height="328" rx="20"/>
+      <rect class="slab" x="600" y="-20" width="168" height="328" rx="16"/>
       <rect class="trail" x="592" y="124" width="136" height="48" rx="24"/>
       <rect class="head" x="664" y="112" width="264" height="72" rx="36"/>
-      <rect class="blk-ink" x="816" y="-20" width="168" height="104" rx="20"/>
-      <rect class="relief" x="840" y="208" width="96" height="96" rx="20"/>
+      <rect class="blk-ink" x="816" y="-20" width="168" height="104" rx="16"/>
+      <rect class="relief" x="840" y="208" width="96" height="96" rx="16"/>
     </svg>
     <div class="text">
       <p class="name">Haysam</p>
-      <p class="tagline">AI darslari, qo‘llanmalar va AI vositalari haqida yangiliklar.</p>
+      <p class="tagline">AI darslari, qo'llanmalar va AI vositalari haqida yangiliklar.</p>
     </div>
   </div>
   <script>

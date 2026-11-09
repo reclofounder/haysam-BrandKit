@@ -1,22 +1,28 @@
 # Chip
 
-A white Inter pill with a `fire` dot, for the one short question or label above a headline.
+Pill-shaped single- or multi-choice options: muted on the tinted background at rest, solid ink when selected.
 
 ## When to use
 
-Above a headline on a carousel or cover, to frame the problem the post solves. Inter is for chips and labels only.
+Choosing one or a few options from a short list (2 to 8) in a form: post type, format, image source. For switching views use `Tabs`; for long lists use a select.
 
 ## Markup
 
 ```html
-<span class="hs-chip">Bir xil ishlarga ko‘p vaqt ketyaptimi?</span>
-<span class="hs-chip hs-chip--plain">Yangi dars</span>
+<fieldset class="hs-field">
+  <legend class="body-4">Post turi</legend>
+  <div class="hs-chips">
+    <label class="hs-chip"><input type="radio" name="type" value="lesson" checked><span class="button-sm">Yangi darslik</span></label>
+    <label class="hs-chip"><input type="radio" name="type" value="offer"><span class="button-sm">Aksiya</span></label>
+  </div>
+</fieldset>
 ```
 
-- 32px Inter Medium on a 1080px canvas (`chip-label`), the smallest text allowed on a post. Set `font-size` to scale.
-- `hs-chip--plain` drops the dot.
+- Use `type="radio"` for one choice and `type="checkbox"` for several. The input stays in the DOM for keyboard and screen readers; the span is what people see.
+- Rest: `background` fill, `line` border, `text-muted` label. Hover: `text` label. Selected: `primary` fill and border, `on-primary` label. Keyboard focus: 2px `focus` ring.
+- Gap between chips is `s-75`; label text is `button-sm`.
 
 ## Do and don't
 
-- One chip per design, one short line.
-- No filler labels or fake UI captions.
+- Keep labels short; a middle dot can add a detail ("Muqova · 9:16 va 4:5").
+- Don't use chips as decoration or status tags; the post chip with a fire dot (`PostChip`) is media only.

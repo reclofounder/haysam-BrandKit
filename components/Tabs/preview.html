@@ -1,0 +1,25 @@
+<!-- @dsCard group="Forms" height=120 subtitle="Segmented tabs on a tinted bar" -->
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<title>Tabs</title>
+<link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="../bundle.css">
+<style>
+  body { margin: 0; padding: var(--s-300); }
+</style>
+</head>
+<body class="hs-ui">
+<div class="hs-tabs" role="tablist" aria-label="Qayerga o'rnatasiz">
+  <button class="hs-tab button-sm" role="tab" aria-selected="true">Claude Code va Desktop</button>
+  <button class="hs-tab button-sm" role="tab" aria-selected="false" tabindex="-1">claude.ai</button>
+</div>
+<script>
+  const tabs = document.querySelectorAll('.hs-tab');
+  tabs.forEach((t) => t.addEventListener('click', () => {
+    tabs.forEach((x) => { x.setAttribute('aria-selected', String(x === t)); x.tabIndex = x === t ? 0 : -1; });
+  }));
+</script>
+</body>
+</html>

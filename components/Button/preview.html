@@ -1,4 +1,4 @@
-<!-- @dsCard group="Actions" height=200 subtitle="Brand-book pill: downloads and links" -->
+<!-- @dsCard group="Actions" height=210 subtitle="Primary and secondary, four sizes" -->
 <!doctype html>
 <html lang="uz">
 <head>
@@ -7,21 +7,25 @@
 <link rel="stylesheet" href="../../tokens.css">
 <link rel="stylesheet" href="../bundle.css">
 <style>
-  body { margin: 0; display: grid; gap: var(--space-s); padding: var(--space-m); background: var(--lavender-white); }
-  .row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: var(--space-m); border-radius: var(--radius-card); }
-  .row--lavender { background: var(--lavender); }
-  .row--night { background: var(--night); }
+  body { margin: 0; padding: var(--s-300); }
+  .rows { display: flex; flex-direction: column; gap: var(--s-200); }
+  .row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-75); }
 </style>
 </head>
-<body>
-  <div class="row row--lavender">
-    <a class="hs-button" href="#">SVG <span aria-hidden="true">↓</span></a>
-    <a class="hs-button" href="#">PNG <span aria-hidden="true">↓</span></a>
-    <a class="hs-button hs-button--lg" href="#">Barcha shriftlar · ZIP <span aria-hidden="true">↓</span></a>
-    <a class="hs-button hs-button--yellow hs-button--lg" href="#">AI brief · .md <span aria-hidden="true">↓</span></a>
+<body class="hs-ui">
+<div class="rows">
+  <div class="row">
+    <a class="hs-btn hs-btn--primary button-lg" href="#">Plaginni o'rnatish <i class="hs-i hs-i--arrow-down" aria-hidden="true"></i></a>
+    <a class="hs-btn hs-btn--primary button-md" href="#">Claude'da ochish <i class="hs-i hs-i--arrow-up-right" aria-hidden="true"></i></a>
+    <a class="hs-btn hs-btn--primary button-sm" href="#">O'rnatish</a>
   </div>
-  <div class="row row--night" data-theme="night">
-    <a class="hs-button hs-button--lg" href="#">Brand kit · ZIP <span aria-hidden="true">↓</span></a>
+  <div class="row">
+    <button class="hs-btn hs-btn--secondary button-md" type="button"><i class="hs-i hs-i--copy" aria-hidden="true"></i> Nusxalash</button>
+    <button class="hs-btn hs-btn--secondary hs-btn--done button-md" type="button"><i class="hs-i hs-i--check" aria-hidden="true"></i> Nusxalandi</button>
+    <button class="hs-btn hs-btn--secondary hs-btn--icon button-md" type="button" aria-label="Nusxalash"><i class="hs-i hs-i--copy" aria-hidden="true"></i></button>
+    <button class="hs-btn hs-btn--primary button-md" type="button" disabled>Yuborish</button>
   </div>
+  <p class="body-6 hs-muted" style="margin: 0">Shu saytda yozsangiz ham bo'ladi: <a class="hs-link" href="#">brif yozish</a>.</p>
+</div>
 </body>
 </html>
