@@ -167,7 +167,7 @@ Applies to UI and media.
   - `haysam-logo-yellow-white`: the `night` ground. `hs-logo--yellow-white`.
   - `haysam-logo-white`: on photos and images. `hs-logo--white`.
   - `haysam-logo-black`: one-colour print only. `hs-logo--black`.
-  - `hs-logo--auto` switches between ink and yellow-white with the Night theme.
+  - `hs-logo--auto` is ink, and switches to yellow-white inside an `hs-night` cover.
 - The app icon (`assets/Marks/haysam-app-icon.svg`, class `hs-app-icon`) is the ink mark on a yellow rounded square: favicon, app icon and the 24px brand mark in the UI nav.
 - Clear space on every side is half the mark's height (`hs-logo-clear`). Smallest size: 32px tall on screen, 20mm wide in print. The app icon may go down to 16px as a favicon.
 - Never stretch, rotate, recolour outside the palette, outline, add shadows or effects, or place the logo on a busy part of an image.
@@ -194,7 +194,7 @@ For Instagram posts, Reels and Stories covers and carousels. Most of the brand b
 | --- | --- | --- |
 | `lavender` → `lavender-white` | #E5E9FF → #F6F7FF | Default post canvas, vertical gradient (`canvas` → `canvas-end`) |
 | `ink` | #58160C | All post text and the ink logo (`post-text`) |
-| `night` | #270601 | Dark canvas, night and cinema covers only (Night theme) |
+| `night` | #270601 | Dark ground of night and cinema covers only (`hs-night`) |
 | `yellow` | #FEE252 | Accent: stickers, pop buttons, the comet's head |
 | `fire` | #DF3909 | Accent: comet trail, cursor, selection box |
 | `white` | #FFFFFF | Chips and tool tiles on lavender; text on night |
@@ -230,7 +230,7 @@ Pick ONE mood font per post and change it from post to post, so the feed stays l
 
 - Default: the lavender gradient, plain or with ONE pattern: dots, lines or tiles (`assets/Backgrounds`, or `hs-canvas--dots` / `hs-canvas--lines`).
 - Carousel slides always sit on lavender with the dot grid.
-- `night` with the warm comet glow is for night and cinema moods only.
+- `night` with the warm comet glow is for night and cinema moods only. Put `hs-night` on that cover: inside it `canvas` becomes `night`, post text turns white and `hs-logo--auto` turns yellow-white, while everything around it stays light. The system has one theme (Light); night is never a page-wide mode.
 - Full-bleed AI image covers fill the whole frame, never a flat colour block on top.
 - The comet glow has a direction: a crisp yellow head and a soft fire trail. Aim the head at the hero. Final art uses `assets/Elements/haysam-comet-warm.png` (or `haysam-comet-sky.png` for offers); `hs-comet` is the CSS stand-in.
 - 3D objects are glassmorphic, high detail and adult (not toy or cartoon), in one hue family taken from the topic rather than forced into brand yellow. Cut objects out cleanly: no halo, leftover backdrop or dirty shadow.

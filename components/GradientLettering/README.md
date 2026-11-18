@@ -4,7 +4,7 @@ Ink-metal gradient lettering (night → ink → metal-light) with a thin top she
 
 ## When to use
 
-On a lavender or white canvas, for a headline that should feel solid and premium. Counts toward the one-or-two signature details per design. Not on `night`, where it disappears.
+On a lavender or white canvas, for a headline that should feel solid and premium. Counts toward the one-or-two signature details per design. Never inside an `hs-night` cover or on `night`, where the dark gradient disappears into the ground.
 
 ## Markup
 

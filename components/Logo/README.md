@@ -22,7 +22,7 @@ The classes embed the exact SVG files from `assets/Logos` and `assets/Marks`. He
 | `night` (#270601) | `hs-logo--yellow-white` |
 | Photos and images | `hs-logo--white` |
 | One-colour print | `hs-logo--black` |
-| Follows the theme (ink on Lavender, yellow-white on Night) | `hs-logo--auto` |
+| Follows its ground (ink, or yellow-white inside an `hs-night` cover) | `hs-logo--auto` |
 
 Wrap it in `hs-logo-clear` to reserve clear space: half the mark's height on every side.
 

@@ -15,7 +15,7 @@ Every Reels or Stories cover. It is the master: the 4:5 feed crop (1080×1350) a
 ## Markup
 
 ```html
-<div class="hs-artboard hs-artboard--story" data-theme="night" style="background: var(--canvas)">
+<div class="hs-artboard hs-artboard--story hs-night" style="background: var(--canvas)">
   ...
   <div class="hs-guides" aria-hidden="true">
     <div class="hs-guides__safe"></div>
@@ -25,7 +25,7 @@ Every Reels or Stories cover. It is the master: the 4:5 feed crop (1080×1350) a
 </div>
 ```
 
-`hs-guides` draws the safe band (`safe-top`–`safe-bottom`) and hatches the Reels UI zones; remove it before export.
+`hs-night` makes this one cover dark: inside it `canvas` becomes `night`, post text turns white and `hs-logo--auto` switches to yellow-white. Leave it off for a lavender cover. `hs-guides` draws the safe band (`safe-top`–`safe-bottom`) and hatches the Reels UI zones; remove it before export.
 
 ## Do and don't
 

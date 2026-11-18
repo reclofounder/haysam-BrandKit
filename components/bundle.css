@@ -390,6 +390,14 @@ textarea.hs-input { min-height: 72px; resize: vertical; }
 }
 .hs-offer-sky { background: linear-gradient(135deg, var(--sky-light), var(--sky) 50%, var(--sky-deep)); color: var(--night); }
 
+/* Night context for night and cinema covers: put hs-night on the artboard or block.
+   Only what sits inside it changes; the page and everything around it stay light. */
+.hs-night {
+  --canvas: var(--night);
+  --canvas-end: var(--night);
+  --post-text: var(--white);
+}
+
 /* ── Logo (UI and media) ──
    <span class="hs-logo hs-logo--ink" role="img" aria-label="Haysam"></span> */
 
@@ -406,12 +414,14 @@ textarea.hs-input { min-height: 72px; resize: vertical; }
 .hs-mark--yellow { background-image: var(--hs-mark-yellow); }
 .hs-mark--white { background-image: var(--hs-mark-white); }
 .hs-mark--black { background-image: var(--hs-mark-black); }
-[data-theme="night"] .hs-logo--auto { background-image: var(--hs-logo-yellow-white); }
-[data-theme="night"] .hs-mark--auto { background-image: var(--hs-mark-yellow); }
+.hs-night .hs-logo--auto { background-image: var(--hs-logo-yellow-white); }
+.hs-night .hs-mark--auto { background-image: var(--hs-mark-yellow); }
 .hs-logo-clear { display: inline-flex; padding: calc(var(--logo-height) / 2); }
 
-/* HAYSAM × [official tool logo] Tool name — one line. */
+/* HAYSAM × [official tool logo] Tool name — one line. Its colour follows its own ground:
+   ink on light grounds, white inside hs-night, white on photos with hs-lockup--white. */
 .hs-lockup { display: inline-flex; align-items: center; gap: calc(var(--logo-height) * 0.35); color: var(--post-text); white-space: nowrap; }
+.hs-lockup--white { color: var(--white); }
 .hs-lockup__x { font: 400 calc(var(--logo-height) * 0.6) / 1 var(--font-label); opacity: 0.7; }
 .hs-lockup__tool { display: block; width: auto; height: calc(var(--logo-height) * 0.75); }
 .hs-lockup__name { font: 600 calc(var(--logo-height) * 0.65) / 1 var(--font-label); }
